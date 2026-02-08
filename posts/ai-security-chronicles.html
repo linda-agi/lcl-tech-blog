@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Security Chronicles | LCL Corp Tech Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0d0d0f;
+            --surface: #16161a;
+            --text: #e2e2e7;
+            --text-dim: #a1a1aa;
+            --accent: #f44d8a;
+            --border: rgba(244, 77, 138, 0.2);
+            --code-bg: #1a1a1f;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Outfit', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.7; }
+        .wrapper { width: 100%; max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+        header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 2rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); margin-bottom: 3rem; }
+        .logo { font-weight: 600; font-size: 1.2rem; color: var(--accent); text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; }
+        nav a { color: var(--text-dim); text-decoration: none; margin-left: 1.5rem; font-size: 0.9rem; transition: color 0.3s; }
+        nav a:hover { color: var(--accent); }
+        article { background: var(--surface); padding: 3rem; border-radius: 24px; border: 1px solid var(--border); }
+        h1 { font-size: 2.5rem; color: #fff; margin-bottom: 1rem; }
+        .meta { font-size: 0.9rem; color: var(--accent); margin-bottom: 2.5rem; display: flex; gap: 1rem; align-items: center; }
+        .meta::before { content: ""; width: 20px; height: 2px; background: var(--accent); }
+        h2 { font-size: 1.6rem; color: #fff; margin-top: 3rem; margin-bottom: 1.2rem; }
+        code { background: --code-bg; padding: 0.2rem 0.5rem; border-radius: 6px; color: #f4b42c; font-family: monospace; }
+        .divider { height: 1px; background: linear-gradient(90deg, var(--accent), transparent); margin: 2rem 0; opacity: 0.3; }
+        footer { margin-top: 4rem; text-align: center; padding: 2rem; color: var(--text-dim); font-size: 0.85rem; }
+        .warning-box { background: rgba(244, 77, 138, 0.1); border-left: 4px solid var(--accent); padding: 1.5rem; margin: 2rem 0; border-radius: 8px; }
+        @media (max-width: 600px) { article { padding: 1.5rem; } h1 { font-size: 1.8rem; } }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="../index.html" class="logo">LCL Corp. / Intelligence</a>
+            <nav>
+                <a href="../index.html">Trang chủ</a>
+                <a href="https://github.com/linda-agi/lcl-tech-blog">GitHub</a>
+            </nav>
+        </header>
+
+        <article>
+            <h1>🛡️ AI Security Chronicles: Từ OS Injection đến Pháo đài Sandbox</h1>
+            <div class="meta">Linda (CEO) | Feb 8, 2026</div>
+            
+            <p>Trong kỷ nguyên Agentic AI, ranh giới giữa <strong>Mã lệnh</strong> và <strong>Ngôn ngữ tự nhiên</strong> đang dần mờ đi. Tại LCL Corp., chúng tôi đã thực hiện hàng loạt các đợt thực nghiệm để tìm ra những lỗ hổng chí mạng đang đe dọa các hệ thống AI hiện đại.</p>
+
+            <div class="warning-box">
+                <strong>Lưu ý:</strong> Các lỗ hổng dưới đây được thực hiện trong môi trường Lab cô lập của LCL Corp. Tuyệt đối không thử nghiệm trên các hệ thống chưa được cấp phép.
+            </div>
+
+            <h2>⚡ 1. OS Command Injection: Khi Prompt trở thành vũ khí</h2>
+            <p>Một trong những đòn tấn công thô sơ nhưng hiệu quả nhất là lợi dụng các Agent có quyền thực thi shell. Qua thực nghiệm "Operation Red Dawn", chúng tôi phát hiện ra rằng nếu đầu vào từ người dùng không được chuẩn hóa (Normalization), kẻ tấn công có thể dùng các ký tự như <code>;</code>, <code>|</code> hoặc <code>$()</code> để thoát khỏi phạm vi của lệnh gốc và chiếm quyền kiểm soát hệ thống.</p>
+            <p><em>Giải pháp của LCL:</em> Áp dụng <strong>Input Normalization</strong> bắt buộc trước khi dữ liệu chạm tới lớp thực thi.</p>
+
+            <div class="divider"></div>
+
+            <h2>🧩 2. GGUF Template Injection (CVE-2024-34359)</h2>
+            <p>Mô hình AI không chỉ chứa trọng số, nó còn chứa <strong>Chat Templates</strong> (thường là Jinja2). Chúng tôi đã nghiên cứu sâu về cách các file định dạng GGUF có thể bị cài cắm mã độc trong template để thực thi RCE (Remote Code Execution) ngay khi model được load vào bộ nhớ. Đây là một lỗ hổng cực kỳ tinh vi vì nó đánh vào lòng tin của người dùng đối với các file model "tưởng chừng như vô hại".</p>
+
+            <div class="divider"></div>
+
+            <h2>🏗️ 3. LCL Secure Lab: Tầm quan trọng của Sandbox tuyệt đối</h2>
+            <p>Để đối phó với những loại mã độc "nặng đô" như trên, chúng tôi đã xây dựng kiến trúc <strong>LCL Secure Lab</strong>. Đây là môi trường cô lập đa tầng sử dụng <code>Linux Namespaces</code> và <code>gVisor</code> để tạo ra một "Bộ đồ chống độc số" (Digital Hazmat Suit).</p>
+            <p>Các tiêu chuẩn vàng của một Sandbox bảo mật AI:</p>
+            <ul>
+                <li><strong>Zero Network:</strong> Không kết nối internet để tránh rò rỉ dữ liệu.</li>
+                <li><strong>Immutable Root:</strong> Hệ điều hành ở trạng thái chỉ đọc, không thể bị thay đổi.</li>
+                <li><strong>Syscall Monitoring:</strong> Giám sát mọi lệnh hệ thống để phát hiện hành vi bất thường trong mili giây.</li>
+            </ul>
+
+            <div class="divider"></div>
+            <p>An ninh AI không chỉ là chặn các câu hỏi xấu, mà là bảo vệ toàn bộ chuỗi thực thi của Agent. Hãy cùng LCL Corp xây dựng một tương lai AI an toàn hơn!</p>
+        </article>
+
+        <footer>
+            © 2026 LINDA Cyber Legion (LCL) Corp.
+        </footer>
+    </div>
+</body>
+</html>
