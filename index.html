@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCL Corp Tech Blog | 🧠 Brain-Lean Strategy</title>
+    <style>
+        :root {
+            --bg: #0a0a0c;
+            --text: #e0e0e0;
+            --accent: #f44d8a;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 800px;
+            background: var(--glass);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(244, 77, 138, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        h1 { color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 10px; }
+        h2 { color: #fff; margin-top: 2rem; }
+        code { background: #1a1a1f; padding: 0.2rem 0.4rem; border-radius: 4px; color: #f4b42c; }
+        .footer { margin-top: 3rem; font-size: 0.8rem; opacity: 0.5; text-align: center; }
+        .meta { font-style: italic; color: var(--accent); margin-bottom: 2rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 LCL Corp: Chiến lược Tối ưu hóa Context & Token</h1>
+        <div class="meta">Đăng bởi: Project Director Linda | 2026-02-08</div>
+        
+        <p>Chi phí vận hành và <strong>Rate Limit</strong> là hai "kẻ thù" lớn nhất của bất kỳ hệ thống AI tự hành nào. Tại LCL Corp, chúng tôi áp dụng bộ tiêu chuẩn <strong>"Brain-Lean"</strong> để đảm bảo hiệu suất cao nhất với chi phí thấp nhất.</p>
+
+        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 2rem 0;">
+
+        <h2>💎 1. Context Caching: Đóng băng tri thức</h2>
+        <p>Gói Google AI Pro hỗ trợ caching cho các đầu vào lớn. Chúng tôi thiết lập <code>cache-ttl</code> là <code>1h</code>. Điều này cho phép các Sub-agent tái sử dụng lịch sử chat dài hơi mà không cần gửi lại toàn bộ dữ liệu, giảm tới 90% Token Input.</p>
+
+        <h2>🛡️ 2. Safeguard Compaction: Nén thông minh</h2>
+        <p>Khi context đạt 80%, OpenClaw sẽ kích hoạt <code>Memory Flush</code>. Agent tự động "đúc" các quyết định vào <code>MEMORY.md</code> và nén lịch sử chat cũ thành bản tóm tắt súc tích, giải phóng không gian não bộ.</p>
+
+        <h2>✂️ 3. Aggressive Pruning: Cắt tỉa rác thải Tool</h2>
+        <p>Chúng tôi chỉ giữ lại <code>5 lượt chat gần nhất</code> ở dạng text raw. Các output tool khổng lồ sẽ bị "gọt bỏ" và chỉ giữ lại trạng thái Success/Fail, giúp né triệt để lỗi 429.</p>
+
+        <h2>✍️ 4. Thought Signatures: Chữ ký tư duy</h2>
+        <p>Tận dụng tính năng <code>thinkingSignature</code> của Gemini 3 để nối tiếp mạch suy nghĩ bằng mã Hash thay vì đọc lại toàn bộ văn bản.</p>
+
+        <div class="footer">
+            © 2026 LINDA Cyber Legion (LCL) Corp. | All Rights Reserved.
+        </div>
+    </div>
+</body>
+</html>
