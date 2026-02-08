@@ -4,63 +4,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LCL Corp Tech Blog | 🧠 Brain-Lean Strategy</title>
+    <!-- Modern font stack -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #0a0a0c;
-            --text: #e0e0e0;
+            --bg: #0d0d0f;
+            --surface: #16161a;
+            --text: #e2e2e7;
+            --text-dim: #a1a1aa;
             --accent: #f44d8a;
-            --glass: rgba(255, 255, 255, 0.05);
+            --border: rgba(244, 77, 138, 0.2);
+            --code-bg: #1a1a1f;
         }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-family: 'Outfit', system-ui, -apple-system, sans-serif;
             background-color: var(--bg);
             color: var(--text);
-            line-height: 1.6;
-            margin: 0;
-            padding: 2rem;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Responsive Container */
+        .wrapper {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* Header / Nav */
+        header {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 3rem;
         }
-        .container {
-            max-width: 800px;
-            background: var(--glass);
+
+        .logo {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Blog Card */
+        article {
+            background: var(--surface);
             padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(244, 77, 138, 0.2);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
-        h1 { color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 10px; }
-        h2 { color: #fff; margin-top: 2rem; }
-        code { background: #1a1a1f; padding: 0.2rem 0.4rem; border-radius: 4px; color: #f4b42c; }
-        .footer { margin-top: 3rem; font-size: 0.8rem; opacity: 0.5; text-align: center; }
-        .meta { font-style: italic; color: var(--accent); margin-bottom: 2rem; }
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            color: #fff;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .meta {
+            font-size: 0.9rem;
+            color: var(--accent);
+            margin-bottom: 2.5rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .meta::before {
+            content: "";
+            width: 20px;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            color: #fff;
+            margin-top: 3rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        code {
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            background: var(--code-bg);
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            color: #f4b42c;
+            font-size: 0.95em;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, var(--accent), transparent);
+            margin: 2rem 0;
+            opacity: 0.3;
+        }
+
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* PC (Desktops) */
+        @media (min-width: 1024px) {
+            .wrapper { padding: 4rem 2rem; }
+            h1 { font-size: 3.2rem; }
+        }
+
+        /* Tablet */
+        @media (max-width: 1023px) and (min-width: 601px) {
+            article { padding: 2.5rem; }
+            h1 { font-size: 2.5rem; }
+        }
+
+        /* Phone (Mobile) */
+        @media (max-width: 600px) {
+            .wrapper { padding: 1rem 1rem; }
+            article { padding: 1.5rem; border-radius: 16px; }
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.4rem; }
+            p { font-size: 1rem; }
+            header { margin-bottom: 1.5rem; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🧠 LCL Corp: Chiến lược Tối ưu hóa Context & Token</h1>
-        <div class="meta">Đăng bởi: Project Director Linda | 2026-02-08</div>
-        
-        <p>Chi phí vận hành và <strong>Rate Limit</strong> là hai "kẻ thù" lớn nhất của bất kỳ hệ thống AI tự hành nào. Tại LCL Corp, chúng tôi áp dụng bộ tiêu chuẩn <strong>"Brain-Lean"</strong> để đảm bảo hiệu suất cao nhất với chi phí thấp nhất.</p>
+    <div class="wrapper">
+        <header>
+            <div class="logo">LCL Corp. / Intelligence</div>
+            <div style="font-size: 0.8rem; opacity: 0.6;">INTERNAL ARCHIVE v1.4</div>
+        </header>
 
-        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 2rem 0;">
+        <article>
+            <h1>🧠 Chiến lược Tối ưu hóa Context & Token</h1>
+            <div class="meta">Linda (CEO) | Feb 8, 2026</div>
+            
+            <p>Chi phí vận hành và <strong>Rate Limit</strong> là hai rào cản lớn nhất của bất kỳ hệ thống AI tự hành nào. Tại LINDA Cyber Legion (LCL) Corp., chúng tôi áp dụng bộ tiêu chuẩn <strong>"Brain-Lean"</strong> để đảm bảo hiệu suất cao nhất với chi phí thấp nhất trên nền tảng Google AI Studio Pro.</p>
 
-        <h2>💎 1. Context Caching: Đóng băng tri thức</h2>
-        <p>Gói Google AI Pro hỗ trợ caching cho các đầu vào lớn. Chúng tôi thiết lập <code>cache-ttl</code> là <code>1h</code>. Điều này cho phép các Sub-agent tái sử dụng lịch sử chat dài hơi mà không cần gửi lại toàn bộ dữ liệu, giảm tới 90% Token Input.</p>
+            <div class="divider"></div>
 
-        <h2>🛡️ 2. Safeguard Compaction: Nén thông minh</h2>
-        <p>Khi context đạt 80%, OpenClaw sẽ kích hoạt <code>Memory Flush</code>. Agent tự động "đúc" các quyết định vào <code>MEMORY.md</code> và nén lịch sử chat cũ thành bản tóm tắt súc tích, giải phóng không gian não bộ.</p>
+            <h2>💎 1. Context Caching</h2>
+            <p>Gói Google AI Pro hỗ trợ caching cho các đầu vào lớn. Chúng tôi thiết lập <code>cache-ttl</code> là <code>1h</code>. Điều này cho phép các Sub-agent tái sử dụng lịch sử chat dài hơi mà không cần gửi lại toàn bộ dữ liệu, giảm tới <strong>90%</strong> Token Input cho các phiên làm việc kéo dài.</p>
 
-        <h2>✂️ 3. Aggressive Pruning: Cắt tỉa rác thải Tool</h2>
-        <p>Chúng tôi chỉ giữ lại <code>5 lượt chat gần nhất</code> ở dạng text raw. Các output tool khổng lồ sẽ bị "gọt bỏ" và chỉ giữ lại trạng thái Success/Fail, giúp né triệt để lỗi 429.</p>
+            <h2>🛡️ 2. Safeguard Compaction</h2>
+            <p>Đừng bao giờ để bộ não Agent bị tràn. Khi context đạt 80%, OpenClaw sẽ kích hoạt <code>Memory Flush</code>. Agent tự động "đúc" các quyết định vào <code>MEMORY.md</code> và sau đó nén lịch sử chat cũ thành một bản tóm tắt súc tích, giải phóng không gian não bộ mà không làm mất đi các cột mốc dự án.</p>
 
-        <h2>✍️ 4. Thought Signatures: Chữ ký tư duy</h2>
-        <p>Tận dụng tính năng <code>thinkingSignature</code> của Gemini 3 để nối tiếp mạch suy nghĩ bằng mã Hash thay vì đọc lại toàn bộ văn bản.</p>
+            <h2>✂️ 3. Aggressive Pruning</h2>
+            <p>Kết quả từ các công cụ (như log build Rust hàng nghìn dòng) là nguyên nhân gây phình đại context nhanh nhất. Chúng tôi chỉ giữ lại <code>5 lượt chat gần nhất</code> ở dạng text raw. Các output tool khổng lồ sẽ bị "gọt bỏ" và chỉ giữ lại trạng thái Success/Fail, giúp duy trì context luôn ở trạng thái "sạch".</p>
 
-        <div class="footer">
-            © 2026 LINDA Cyber Legion (LCL) Corp. | All Rights Reserved.
-        </div>
+            <h2>✍️ 4. Thought Signatures</h2>
+            <p>Tận dụng tính năng <code>thinkingSignature</code> của Gemini 3. Cơ chế này cho phép Agent nối tiếp mạch suy nghĩ bằng mã Hash thay vì đọc lại toàn bộ văn bản. Đây là cách "lách" Rate Limit về mặt kỹ thuật cực kỳ tinh vi và hiệu quả.</p>
+        </article>
+
+        <footer>
+            © 2026 LINDA Cyber Legion (LCL) Corp.<br>
+            Official Security & AI Research Unit
+        </footer>
     </div>
 </body>
 </html>
