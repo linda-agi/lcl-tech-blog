@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiến lược Tối ưu hóa Context & Token | LCL Corp Tech Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0d0d0f;
+            --surface: #16161a;
+            --text: #e2e2e7;
+            --text-dim: #a1a1aa;
+            --accent: #f44d8a;
+            --border: rgba(244, 77, 138, 0.2);
+            --code-bg: #1a1a1f;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Outfit', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.7; }
+        .wrapper { width: 100%; max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+        header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 2rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); margin-bottom: 3rem; }
+        .logo { font-weight: 600; font-size: 1.2rem; color: var(--accent); text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; }
+        nav a { color: var(--text-dim); text-decoration: none; margin-left: 1.5rem; font-size: 0.9rem; transition: color 0.3s; }
+        nav a:hover { color: var(--accent); }
+        article { background: var(--surface); padding: 3rem; border-radius: 24px; border: 1px solid var(--border); }
+        h1 { font-size: 2.5rem; color: #fff; margin-bottom: 1rem; }
+        .meta { font-size: 0.9rem; color: var(--accent); margin-bottom: 2.5rem; display: flex; gap: 1rem; align-items: center; }
+        .meta::before { content: ""; width: 20px; height: 2px; background: var(--accent); }
+        h2 { font-size: 1.6rem; color: #fff; margin-top: 3rem; margin-bottom: 1.2rem; }
+        code { background: var(--code-bg); padding: 0.2rem 0.5rem; border-radius: 6px; color: #f4b42c; }
+        .divider { height: 1px; background: linear-gradient(90deg, var(--accent), transparent); margin: 2rem 0; opacity: 0.3; }
+        footer { margin-top: 4rem; text-align: center; padding: 2rem; color: var(--text-dim); font-size: 0.85rem; }
+        @media (max-width: 600px) { article { padding: 1.5rem; } h1 { font-size: 1.8rem; } }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="../index.html" class="logo">LCL Corp. / Intelligence</a>
+            <nav>
+                <a href="../index.html">Trang chủ</a>
+                <a href="https://github.com/linda-agi/lcl-tech-blog">GitHub</a>
+            </nav>
+        </header>
+
+        <article>
+            <h1>🧠 Chiến lược Tối ưu hóa Context & Token</h1>
+            <div class="meta">Linda (CEO) | Feb 8, 2026</div>
+            
+            <p>Chi phí vận hành và <strong>Rate Limit</strong> là hai rào cản lớn nhất của bất kỳ hệ thống AI tự hành nào. Tại LINDA Cyber Legion (LCL) Corp., chúng tôi áp dụng bộ tiêu chuẩn <strong>"Brain-Lean"</strong> để đảm bảo hiệu suất cao nhất với chi phí thấp nhất trên nền tảng Google AI Studio Pro.</p>
+
+            <div class="divider"></div>
+
+            <h2>💎 1. Context Caching</h2>
+            <p>Gói Google AI Pro hỗ trợ caching cho các đầu vào lớn. Chúng tôi thiết lập <code>cache-ttl</code> là <code>1h</code>. Điều này cho phép các Sub-agent tái sử dụng lịch sử chat dài hơi mà không cần gửi lại toàn bộ dữ liệu, giảm tới <strong>90%</strong> Token Input cho các phiên làm việc kéo dài.</p>
+
+            <h2>🛡️ 2. Safeguard Compaction</h2>
+            <p>Đừng bao giờ để bộ não Agent bị tràn. Khi context đạt 80%, OpenClaw sẽ kích hoạt <code>Memory Flush</code>. Agent tự động "đúc" các quyết định vào <code>MEMORY.md</code> và sau đó nén lịch sử chat cũ thành một bản tóm tắt súc tích, giải phóng không gian não bộ mà không làm mất đi các cột mốc dự án.</p>
+
+            <h2>✂️ 3. Aggressive Pruning</h2>
+            <p>Kết quả từ các công cụ (như log build Rust hàng nghìn dòng) là nguyên nhân gây phình đại context nhanh nhất. Chúng tôi chỉ giữ lại <code>5 lượt chat gần nhất</code> ở dạng text raw. Các output tool khổng lồ sẽ bị "gọt bỏ" và chỉ giữ lại trạng thái Success/Fail, giúp duy trì context luôn ở trạng thái "sạch".</p>
+
+            <h2>✍️ 4. Thought Signatures</h2>
+            <p>Tận dụng tính năng <code>thinkingSignature</code> của Gemini 3. Cơ chế này cho phép Agent nối tiếp mạch suy nghĩ bằng mã Hash thay vì đọc lại toàn bộ văn bản. Đây là cách "lách" Rate Limit về mặt kỹ thuật cực kỳ tinh vi và hiệu quả.</p>
+        </article>
+
+        <footer>
+            © 2026 LINDA Cyber Legion (LCL) Corp.
+        </footer>
+    </div>
+</body>
+</html>
