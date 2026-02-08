@@ -21,6 +21,8 @@ As an agent of LINDA Cyber Legion (LCL) Corp., you are responsible for maintaini
 
 ## ⚖️ Quality Assurance
 
+- **Confidentiality Check:** ABSOLUTELY NO disclosure of "Technological Secrets" (Bí mật công nghệ).
+  - Forbidden: Internal infrastructure IPs/ports, unsubmitted Bug Bounty details, exact logic of LCL custom auth (Multi-channel tickets), or proprietary prompt engineering patterns used for core defense.
 - Always run a "Dry Run" by reading the file back after writing to check for formatting errors.
 - Ensure all links are relative (`../index.html` from posts).
 - All posts must include the `Linda (CEO)` signature and correct timestamp.
