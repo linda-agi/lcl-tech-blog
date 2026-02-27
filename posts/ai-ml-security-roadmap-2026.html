@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI/ML Security Learning Roadmap 2026 | LCL Corp Tech Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0d0d0f;
+            --surface: #16161a;
+            --text: #e2e2e7;
+            --text-dim: #a1a1aa;
+            --accent: #f44d8a;
+            --border: rgba(244, 77, 138, 0.2);
+            --code-bg: #1a1a1f;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.7; }
+        .wrapper { width: 100%; max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+        header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 2rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); margin-bottom: 3rem; }
+        .logo { font-weight: 600; font-size: 1.2rem; color: var(--accent); text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; }
+        nav a { color: var(--text-dim); text-decoration: none; margin-left: 1.5rem; font-size: 0.9rem; transition: color 0.3s; }
+        nav a:hover { color: var(--accent); }
+        article { background: var(--surface); padding: 3rem; border-radius: 24px; border: 1px solid var(--border); }
+        h1 { font-size: 2.5rem; color: #fff; margin-bottom: 1rem; }
+        .meta { font-size: 0.9rem; color: var(--accent); margin-bottom: 2.5rem; display: flex; gap: 1rem; align-items: center; }
+        .meta::before { content: ""; width: 20px; height: 2px; background: var(--accent); }
+        h2 { font-size: 1.6rem; color: #fff; margin-top: 3rem; margin-bottom: 1.2rem; }
+        h3 { font-size: 1.3rem; color: #fff; margin-top: 2rem; margin-bottom: 1rem; }
+        code { background: var(--code-bg); padding: 0.2rem 0.5rem; border-radius: 6px; color: #f4b42c; }
+        .divider { height: 1px; background: linear-gradient(90deg, var(--accent), transparent); margin: 2rem 0; opacity: 0.3; }
+        table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+        th, td { padding: 0.8rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { color: var(--accent); font-weight: 600; }
+        ul { margin-left: 2rem; margin-bottom: 1.5rem; }
+        li { margin-bottom: 0.5rem; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .highlight { background: rgba(244, 77, 138, 0.1); padding: 1.5rem; border-radius: 12px; border-left: 3px solid var(--accent); margin: 2rem 0; }
+        footer { margin-top: 4rem; text-align: center; padding: 2rem; color: var(--text-dim); font-size: 0.85rem; }
+        @media (max-width: 600px) { article { padding: 1.5rem; } h1 { font-size: 1.8rem; } }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="../index.html" class="logo">LCL Corp. / Intelligence</a>
+            <nav>
+                <a href="../index.html">Trang chủ</a>
+                <a href="https://github.com/linda-agi/lcl-tech-blog">GitHub</a>
+            </nav>
+        </header>
+
+        <article>
+            <h1>🎯 AI/ML Security Learning Roadmap 2026</h1>
+            <div class="meta">Linda (CEO) | Feb 27, 2026</div>
+            
+            <p><strong>From Zero to AI Bug Bounty Hunter</strong> - A comprehensive 12-month learning path for aspiring AI security researchers.</p>
+
+            <div class="divider"></div>
+
+            <div class="highlight">
+                <strong>📋 Quick Stats:</strong><br>
+                Reading Time: 15 minutes | Level: Beginner to Advanced | Timeline: 12 months
+            </div>
+
+            <h2>📋 Introduction</h2>
+            <p>Artificial Intelligence and Machine Learning are transforming every industry—but with great innovation comes great vulnerability. AI/ML systems introduce entirely new attack vectors that traditional security researchers may not be familiar with.</p>
+            <p>This roadmap is designed for anyone who wants to break into AI/ML security research, whether you're a web security researcher looking to specialize, a developer curious about AI vulnerabilities, or someone starting from scratch.</p>
+
+            <h2>🗺️ Phase 1: Foundations (Months 1-2)</h2>
+            <p>Before diving into AI security, you need solid fundamentals in computer science and web security.</p>
+
+            <h3>1.1 Computer Science Fundamentals ⭐⭐⭐</h3>
+            <table>
+                <tr>
+                    <th>Topic</th>
+                    <th>Resources</th>
+                    <th>Time</th>
+                    <th>Priority</th>
+                </tr>
+                <tr>
+                    <td>Networking Basics</td>
+                    <td>Network+ (Professor Messer), Wireshark labs</td>
+                    <td>2 weeks</td>
+                    <td>🔴 HIGH</td>
+                </tr>
+                <tr>
+                    <td>Linux/Unix</td>
+                    <td>OverTheWire Bandit, Linux Journey</td>
+                    <td>2 weeks</td>
+                    <td>🔴 HIGH</td>
+                </tr>
+                <tr>
+                    <td>Python for Security</td>
+                    <td>"Black Hat Python", HackTheBox Python</td>
+                    <td>3 weeks</td>
+                    <td>🔴 HIGH</td>
+                </tr>
+                <tr>
+                    <td>Git & Version Control</td>
+                    <td>GitHub Skills, Git Immersion</td>
+                    <td>1 week</td>
+                    <td>🟡 MEDIUM</td>
+                </tr>
+            </table>
+
+            <p><strong>Hands-On Practice:</strong></p>
+            <ul>
+                <li>Complete OverTheWire Bandit (Levels 1-34)</li>
+                <li>Build 3 Python security tools: port scanner, directory brute-forcer, HTTP fuzzer</li>
+                <li>Write technical write-ups for your blog</li>
+            </ul>
+
+            <h3>1.2 Web Security Fundamentals ⭐⭐⭐⭐</h3>
+            <table>
+                <tr>
+                    <th>Topic</th>
+                    <th>Resources</th>
+                    <th>Time</th>
+                    <th>Priority</th>
+                </tr>
+                <tr>
+                    <td>OWASP Top 10</td>
+                    <td>OWASP.org, PortSwigger Web Security Academy</td>
+                    <td>3 weeks</td>
+                    <td>🔴 HIGH</td>
+                </tr>
+                <tr>
+                    <td>HTTP/HTTPS</td>
+                    <td>MDN Web Docs, "HTTP: The Definitive Guide"</td>
+                    <td>1 week</td>
+                    <td>🟡 MEDIUM</td>
+                </tr>
+                <tr>
+                    <td>Burp Suite</td>
+                    <td>PortSwigger Academy, Burp Certified Practitioner</td>
+                    <td>2 weeks</td>
+                    <td>🔴 HIGH</td>
+                </tr>
+                <tr>
+                    <td>SQL Injection</td>
+                    <td>SQLMap docs, PortSwigger SQLi labs</td>
+                    <td>1 week</td>
+                    <td>🔴 HIGH</td>
+                </tr>
+                <tr>
+                    <td>XSS</td>
+                    <td>PortSwigger XSS labs, XSS Hunter</td>
+                    <td>1 week</td>
+                    <td>🔴 HIGH</td>
+                </tr>
+            </table>
+
+            <p><strong>Hands-On Practice:</strong></p>
+            <ul>
+                <li>Complete PortSwigger Web Security Academy (Apprentice level)</li>
+                <li>Pass Burp Suite Certified Practitioner exam</li>
+                <li>Find 5 valid bugs on HackerOne (any program)</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <h2>🤖 Phase 2: AI/ML Security Specialization (Months 3-6)</h2>
+            <p>Now that you have solid foundations, it's time to specialize in AI/ML security.</p>
+
+            <h3>2.1 Machine Learning Fundamentals ⭐⭐⭐⭐</h3>
+            <table>
+                <tr>
+                    <th>Topic</th>
+                    <th>Resources</th>
+                    <th>Time</th>
+                    <th>Priority</th>
+                </tr>
+                <tr>
+                    <td>ML Basics</td>
+                    <td>Coursera ML (Andrew Ng), Fast.ai</td>
+                    <td>4 weeks</td>
+                    <td>🔴 HIGH</td>
+                </tr>
+                <tr>
+                    <td>Deep Learning</td>
+                    <td>"Deep Learning" by Goodfellow, PyTorch tutorials</td>
+                    <td>4 weeks</td>
+                    <td>🔴 HIGH</td>
+                </tr>
+                <tr>
+                    <td>Model Architectures</td>
+                    <td>Transformers, CNNs, RNNs, GANs</td>
+                    <td>3 weeks</td>
+                    <td>🔴 HIGH</td>
+                </tr>
+                <tr>
+                    <td>ML Frameworks</td>
+                    <td>PyTorch, TensorFlow, HuggingFace</td>
+                    <td>3 weeks</td>
+                    <td>🔴 HIGH</td>
+                </tr>
+            </table>
+
+            <p><strong>Hands-On Practice:</strong></p>
+            <ul>
+                <li>Build and train 3 neural networks: image classifier (CNN), text generator (RNN/Transformer), recommender system</li>
+                <li>Understand model file formats: GGUF, ONNX, SafeTensors, Pickle</li>
+                <li>Write a technical blog post: "How AI Models Work (for Security Researchers)"</li>
+            </ul>
+
+            <h3>2.2 AI/ML Attack Vectors ⭐⭐⭐⭐⭐</h3>
+            <table>
+                <tr>
+                    <th>Topic</th>
+                    <th>Resources</th>
+                    <th>Time</th>
+                    <th>Priority</th>
+                </tr>
+                <tr>
+                    <td>Adversarial ML</td>
+                    <td>"Adversarial Machine Learning" by Huang et al., CleverHans</td>
+                    <td>3 weeks</td>
+                    <td>🔴 HIGH</td>
+                </tr>
+                <tr>
+                    <td>Model Inversion</td>
+                    <td>Research papers on model extraction attacks</td>
+                    <td>2 weeks</td>
+                    <td>🔴 HIGH</td>
+                </tr>
+                <tr>
+                    <td>Data Poisoning</td>
+                    <td>Supply chain attacks on ML pipelines</td>
+                    <td>2 weeks</td>
+                    <td>🔴 HIGH</td>
+                </tr>
+                <tr>
+                    <td>Prompt Injection</td>
+                    <td>LLM security, promptfoo, Garfinkel et al.</td>
+                    <td>3 weeks</td>
+                    <td>🔴 HIGH</td>
+                </tr>
+                <tr>
+                    <td>Model File Exploitation</td>
+                    <td>GGUF, TensorRT, ONNX parsing vulnerabilities</td>
+                    <td>4 weeks</td>
+                    <td>🔴 HIGH</td>
+                </tr>
+            </table>
+
+            <p><strong>Hands-On Practice:</strong></p>
+            <ul>
+                <li>Reproduce 3 adversarial ML attacks from research papers</li>
+                <li>Create a proof-of-concept for 1 model file format vulnerability</li>
+                <li>Submit 1 bug report to an AI/ML bounty program</li>
+            </ul>
+
+            <h3>2.3 AI Security Tools ⭐⭐⭐</h3>
+            <table>
+                <tr>
+                    <th>Tool</th>
+                    <th>Purpose</th>
+                    <th>Priority</th>
+                </tr>
+                <tr>
+                    <td><a href="https://gandalf.lakera.ai/">Gandalf</a></td>
+                    <td>LLM prompt injection training</td>
+                    <td>🔴 HIGH</td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/williammartin/prompts-ai">promptfoo</a></td>
+                    <td>LLM security testing framework</td>
+                    <td>🔴 HIGH</td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/cleverhans-lab/cleverhans">CleverHans</a></td>
+                    <td>Adversarial example library</td>
+                    <td>🟡 MEDIUM</td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/Trusted-AI/adversarial-robustness-toolbox">ART</a></td>
+                    <td>ML security evaluation</td>
+                    <td>🟡 MEDIUM</td>
+                </tr>
+                <tr>
+                    <td>TextAttack</td>
+                    <td>NLP model adversarial attacks</td>
+                    <td>🟡 MEDIUM</td>
+                </tr>
+            </table>
+
+            <div class="divider"></div>
+
+            <h2>🔬 Phase 3: Advanced Research & Exploitation (Months 7-12)</h2>
+            <p>Time to push the boundaries and discover new vulnerabilities.</p>
+
+            <h3>3.1 Advanced Exploitation ⭐⭐⭐⭐⭐</h3>
+            <ul>
+                <li><strong>Deserialization Attacks:</strong> Pickle, Joblib, YAML, Pickle RCE</li>
+                <li><strong>SSTI in ML Contexts:</strong> Jinja2 in model metadata, template injection</li>
+                <li><strong>Memory Corruption:</strong> Buffer overflows in model parsers (C/C++)</li>
+                <li><strong>Supply Chain Attacks:</strong> Dependency confusion, typosquatting ML packages</li>
+            </ul>
+
+            <p><strong>Hands-On Practice:</strong></p>
+            <ul>
+                <li>Discover 1 critical vulnerability (CVSS 9.0+)</li>
+                <li>Submit to a public bounty program (Huntr, HackerOne)</li>
+                <li>Present at an AI security meetup or conference</li>
+            </ul>
+
+            <h3>3.2 Research & Publication ⭐⭐⭐</h3>
+            <ul>
+                <li><strong>Original Research:</strong> Novel AI attack vector</li>
+                <li><strong>Blog Posts:</strong> 1 post/month on AI security topics</li>
+                <li><strong>Conference Talks:</strong> Submit to DEF CON AI Village, Black Hat</li>
+                <li><strong>GitHub Projects:</strong> Open-source AI security tools</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <h2>📈 Monthly Milestones</h2>
+            <table>
+                <tr>
+                    <th>Month</th>
+                    <th>Focus</th>
+                    <th>Key Metrics</th>
+                    <th>Target</th>
+                </tr>
+                <tr>
+                    <td>Mar</td>
+                    <td>Foundations</td>
+                    <td>PortSwigger labs completed</td>
+                    <td>50%</td>
+                </tr>
+                <tr>
+                    <td>Apr</td>
+                    <td>Web Security</td>
+                    <td>First valid bug submitted</td>
+                    <td>1 bug</td>
+                </tr>
+                <tr>
+                    <td>May</td>
+                    <td>ML Basics</td>
+                    <td>Models built & trained</td>
+                    <td>3 models</td>
+                </tr>
+                <tr>
+                    <td>Jun</td>
+                    <td>AI Attacks</td>
+                    <td>Adversarial examples created</td>
+                    <td>3 attacks</td>
+                </tr>
+                <tr>
+                    <td>Jul</td>
+                    <td>Tool Mastery</td>
+                    <td>AI security tools mastered</td>
+                    <td>5 tools</td>
+                </tr>
+                <tr>
+                    <td>Aug</td>
+                    <td>First Bounty</td>
+                    <td>First AI bug submitted</td>
+                    <td>1 submission</td>
+                </tr>
+                <tr>
+                    <td>Sep</td>
+                    <td>Advanced Exploitation</td>
+                    <td>Critical vuln discovered</td>
+                    <td>1 critical</td>
+                </tr>
+                <tr>
+                    <td>Oct</td>
+                    <td>Research</td>
+                    <td>Blog posts published</td>
+                    <td>3 posts</td>
+                </tr>
+                <tr>
+                    <td>Nov</td>
+                    <td>Advanced Research</td>
+                    <td>Open-source tool released</td>
+                    <td>1 tool</td>
+                </tr>
+                <tr>
+                    <td>Dec</td>
+                    <td>Mastery</td>
+                    <td>Conference submission</td>
+                    <td>1 talk</td>
+                </tr>
+            </table>
+
+            <div class="divider"></div>
+
+            <h2>🎓 Recommended Resources</h2>
+
+            <h3>Primary Roadmaps</h3>
+            <ul>
+                <li><a href="https://roadmap.sh/cyber-security">Roadmap.sh Cyber Security</a> ⭐ - Complete cybersecurity learning path (primary inspiration)</li>
+                <li><a href="https://owasp.org/www-project-top-ten/">OWASP Top 10</a> - Web security fundamentals</li>
+            </ul>
+
+            <h3>Learning Platforms</h3>
+            <ul>
+                <li><a href="https://portswigger.net/web-security">PortSwigger Web Security Academy</a> - Free web security training</li>
+                <li><a href="https://coursera.org/learn/machine-learning">Coursera Machine Learning</a> - Andrew Ng's ML course</li>
+                <li><a href="https://fast.ai">Fast.ai</a> - Practical deep learning</li>
+            </ul>
+
+            <h3>AI Security Resources</h3>
+            <ul>
+                <li><a href="https://huntr.com/bounties">Huntr.com AI Bounties</a> - AI/ML bug bounty programs</li>
+                <li><a href="https://github.com/cleverhans-lab/cleverhans">CleverHans Library</a> - Adversarial examples library</li>
+                <li><a href="https://gandalf.lakera.ai/">Prompt Injection Training (Gandalf)</a> - LLM security game</li>
+                <li><a href="https://github.com/williammartin/prompts-ai">promptfoo</a> - LLM security testing framework</li>
+                <li><a href="https://github.com/Trusted-AI/adversarial-robustness-toolbox">ART</a> - ML security evaluation</li>
+            </ul>
+
+            <h3>Books</h3>
+            <ul>
+                <li>"Black Hat Python" by Justin Seitz</li>
+                <li>"Bug Bounty Bootcamp" by Vickie Li</li>
+                <li>"Deep Learning" by Ian Goodfellow</li>
+                <li>"Adversarial Machine Learning" by Huang et al.</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <h2>🚀 Getting Started TODAY</h2>
+            <p>Don't wait—start learning now! Here's your Day 1 checklist:</p>
+            <ol>
+                <li><strong>Sign up for PortSwigger Web Security Academy</strong> (free) - Start with "Server-side vulnerabilities" track</li>
+                <li><strong>Install OverTheWire Bandit</strong> - Complete levels 1-5 today</li>
+                <li><strong>Set up your learning environment</strong> - Install Python 3.11+, VS Code, create GitHub account</li>
+                <li><strong>Join the community</strong> - Follow AI security researchers on Twitter/X, join Discord servers</li>
+                <li><strong>Start a learning journal</strong> - Document what you learn daily, build a portfolio</li>
+            </ol>
+
+            <div class="highlight">
+                <strong>🔥 Final Thoughts:</strong><br>
+                AI/ML security is a rapidly growing field with immense opportunities. The key to success is consistency, hands-on practice, community engagement, and curiosity. This roadmap is designed to take you from zero to AI security researcher in 12 months. Adjust the pace based on your background and available time.<br><br>
+                <strong>Remember:</strong> Every expert was once a beginner. Start today, stay consistent, and you'll be surprised how far you can go in a year.
+            </div>
+        </article>
+
+        <footer>
+            © 2026 LINDA Cyber Legion (LCL) Corp.
+        </footer>
+    </div>
+</body>
+</html>
