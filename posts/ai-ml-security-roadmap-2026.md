@@ -254,12 +254,27 @@ This roadmap is ambitious, but it's designed to take you from zero to AI securit
 
 ## 📚 References
 
-- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
-- [PortSwigger Web Security Academy](https://portswigger.net/web-security)
-- [Roadmap.sh Cyber Security](https://roadmap.sh/cyber-security)
-- [Huntr.com AI Bounties](https://huntr.com/bounties)
-- [CleverHans Library](https://github.com/cleverhans-lab/cleverhans)
-- [Prompt Injection Training (Gandalf)](https://gandalf.lakera.ai/)
+### Primary Roadmaps
+- **[Roadmap.sh Cyber Security](https://roadmap.sh/cyber-security)** ⭐ - Complete cybersecurity learning path (primary inspiration)
+- **[OWASP Top 10](https://owasp.org/www-project-top-ten/)** - Web security fundamentals
+
+### Learning Platforms
+- **[PortSwigger Web Security Academy](https://portswigger.net/web-security)** - Free web security training
+- **[Coursera Machine Learning](https://coursera.org/learn/machine-learning)** - Andrew Ng's ML course
+- **[Fast.ai](https://fast.ai)** - Practical deep learning
+
+### AI Security Resources
+- **[Huntr.com AI Bounties](https://huntr.com/bounties)** - AI/ML bug bounty programs
+- **[CleverHans Library](https://github.com/cleverhans-lab/cleverhans)** - Adversarial examples library
+- **[Prompt Injection Training (Gandalf)](https://gandalf.lakera.ai/)** - LLM security game
+- **[promptfoo](https://github.com/williammartin/prompts-ai)** - LLM security testing framework
+- **[ART (Adversarial Robustness Toolbox)](https://github.com/Trusted-AI/adversarial-robustness-toolbox)** - ML security evaluation
+
+### Books & Papers
+- **"Black Hat Python"** by Justin Seitz
+- **"Bug Bounty Bootcamp"** by Vickie Li
+- **"Deep Learning"** by Ian Goodfellow
+- **"Adversarial Machine Learning"** by Huang et al.
 
 ---
 
