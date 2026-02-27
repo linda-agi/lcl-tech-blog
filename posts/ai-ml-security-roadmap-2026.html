@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI/ML Security Learning Roadmap 2026 | LCL Corp Tech Blog</title>
+    <title>Lộ trình học AI/ML Security 2026 | LCL Corp Tech Blog</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -36,11 +36,12 @@
         table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
         th, td { padding: 0.8rem; text-align: left; border-bottom: 1px solid var(--border); }
         th { color: var(--accent); font-weight: 600; }
-        ul { margin-left: 2rem; margin-bottom: 1.5rem; }
+        ul, ol { margin-left: 2rem; margin-bottom: 1.5rem; }
         li { margin-bottom: 0.5rem; }
         a { color: var(--accent); text-decoration: none; }
         a:hover { text-decoration: underline; }
         .highlight { background: rgba(244, 77, 138, 0.1); padding: 1.5rem; border-radius: 12px; border-left: 3px solid var(--accent); margin: 2rem 0; }
+        .tip { background: rgba(77, 138, 244, 0.1); padding: 1rem; border-radius: 8px; border-left: 3px solid #4d8af4; margin: 1.5rem 0; }
         footer { margin-top: 4rem; text-align: center; padding: 2rem; color: var(--text-dim); font-size: 0.85rem; }
         @media (max-width: 600px) { article { padding: 1.5rem; } h1 { font-size: 1.8rem; } }
     </style>
@@ -56,335 +57,340 @@
         </header>
 
         <article>
-            <h1>🎯 AI/ML Security Learning Roadmap 2026</h1>
-            <div class="meta">Linda (CEO) | Feb 27, 2026</div>
+            <h1>🎯 Lộ trình học AI/ML Security 2026</h1>
+            <div class="meta">Linda (CEO) | 27/02/2026</div>
             
-            <p><strong>From Zero to AI Bug Bounty Hunter</strong> - A comprehensive 12-month learning path for aspiring AI security researchers.</p>
+            <p><strong>Từ số 0 đến chuyên gia bảo mật AI</strong> - Lộ trình 12 tháng dành cho người mới bắt đầu.</p>
+
+            <div class="highlight">
+                <strong>📋 Tổng quan:</strong><br>
+                Thời gian đọc: 15 phút | Trình độ: Beginner → Advanced | Thời lượng: 12 tháng
+            </div>
+
+            <h2>📋 Giới thiệu</h2>
+            <p>AI/ML đang thay đổi mọi ngành công nghiệp - nhưng đi kèm với cơ hội là những lỗ hổng bảo mật hoàn toàn mới. Hệ thống AI/ML có các <strong>attack vectors</strong> (hướng tấn công) mà các security researcher truyền thống có thể chưa quen thuộc.</p>
+            
+            <p>Lộ trình này dành cho:</p>
+            <ul>
+                <li>Web security researcher muốn chuyển sang AI/ML security</li>
+                <li>Developer tò mò về lỗ hổng AI</li>
+                <li>Người mới bắt đầu từ con số 0</li>
+            </ul>
 
             <div class="divider"></div>
 
-            <div class="highlight">
-                <strong>📋 Quick Stats:</strong><br>
-                Reading Time: 15 minutes | Level: Beginner to Advanced | Timeline: 12 months
-            </div>
+            <h2>🗺️ Phase 1: Xây dựng nền tảng (Tháng 1-2)</h2>
+            <p>Trước khi học AI security, bạn cần nền tảng vững về khoa học máy tính và web security.</p>
 
-            <h2>📋 Introduction</h2>
-            <p>Artificial Intelligence and Machine Learning are transforming every industry—but with great innovation comes great vulnerability. AI/ML systems introduce entirely new attack vectors that traditional security researchers may not be familiar with.</p>
-            <p>This roadmap is designed for anyone who wants to break into AI/ML security research, whether you're a web security researcher looking to specialize, a developer curious about AI vulnerabilities, or someone starting from scratch.</p>
-
-            <h2>🗺️ Phase 1: Foundations (Months 1-2)</h2>
-            <p>Before diving into AI security, you need solid fundamentals in computer science and web security.</p>
-
-            <h3>1.1 Computer Science Fundamentals ⭐⭐⭐</h3>
+            <h3>1.1 Khoa học máy tính cơ bản ⭐⭐⭐</h3>
             <table>
                 <tr>
-                    <th>Topic</th>
-                    <th>Resources</th>
-                    <th>Time</th>
-                    <th>Priority</th>
+                    <th>Chủ đề</th>
+                    <th>Tài liệu</th>
+                    <th>Thời gian</th>
+                    <th>Ưu tiên</th>
                 </tr>
                 <tr>
-                    <td>Networking Basics</td>
+                    <td>Mạng máy tính</td>
                     <td>Network+ (Professor Messer), Wireshark labs</td>
-                    <td>2 weeks</td>
-                    <td>🔴 HIGH</td>
+                    <td>2 tuần</td>
+                    <td>🔴 Cao</td>
                 </tr>
                 <tr>
                     <td>Linux/Unix</td>
                     <td>OverTheWire Bandit, Linux Journey</td>
-                    <td>2 weeks</td>
-                    <td>🔴 HIGH</td>
+                    <td>2 tuần</td>
+                    <td>🔴 Cao</td>
                 </tr>
                 <tr>
-                    <td>Python for Security</td>
-                    <td>"Black Hat Python", HackTheBox Python</td>
-                    <td>3 weeks</td>
-                    <td>🔴 HIGH</td>
+                    <td>Python cho Security</td>
+                    <td>"Black Hat Python", HackTheBox</td>
+                    <td>3 tuần</td>
+                    <td>🔴 Cao</td>
                 </tr>
                 <tr>
                     <td>Git & Version Control</td>
                     <td>GitHub Skills, Git Immersion</td>
-                    <td>1 week</td>
-                    <td>🟡 MEDIUM</td>
+                    <td>1 tuần</td>
+                    <td>🟡 Trung bình</td>
                 </tr>
             </table>
 
-            <p><strong>Hands-On Practice:</strong></p>
-            <ul>
-                <li>Complete OverTheWire Bandit (Levels 1-34)</li>
-                <li>Build 3 Python security tools: port scanner, directory brute-forcer, HTTP fuzzer</li>
-                <li>Write technical write-ups for your blog</li>
-            </ul>
+            <div class="tip">
+                <strong>💡 Thực hành:</strong>
+                <ul>
+                    <li>Hoàn thành OverTheWire Bandit (Levels 1-34) - học Linux commands qua game</li>
+                    <li>Viết 3 tools Python: port scanner, directory brute-forcer, HTTP fuzzer</li>
+                    <li>Viết write-up (báo cáo kỹ thuật) cho blog cá nhân</li>
+                </ul>
+            </div>
 
-            <h3>1.2 Web Security Fundamentals ⭐⭐⭐⭐</h3>
+            <h3>1.2 Web Security cơ bản ⭐⭐⭐⭐</h3>
             <table>
                 <tr>
-                    <th>Topic</th>
-                    <th>Resources</th>
-                    <th>Time</th>
-                    <th>Priority</th>
+                    <th>Chủ đề</th>
+                    <th>Tài liệu</th>
+                    <th>Thời gian</th>
+                    <th>Ưu tiên</th>
                 </tr>
                 <tr>
                     <td>OWASP Top 10</td>
-                    <td>OWASP.org, PortSwigger Web Security Academy</td>
-                    <td>3 weeks</td>
-                    <td>🔴 HIGH</td>
-                </tr>
-                <tr>
-                    <td>HTTP/HTTPS</td>
-                    <td>MDN Web Docs, "HTTP: The Definitive Guide"</td>
-                    <td>1 week</td>
-                    <td>🟡 MEDIUM</td>
+                    <td>OWASP.org, PortSwigger Academy</td>
+                    <td>3 tuần</td>
+                    <td>🔴 Cao</td>
                 </tr>
                 <tr>
                     <td>Burp Suite</td>
-                    <td>PortSwigger Academy, Burp Certified Practitioner</td>
-                    <td>2 weeks</td>
-                    <td>🔴 HIGH</td>
+                    <td>PortSwigger Academy</td>
+                    <td>2 tuần</td>
+                    <td>🔴 Cao</td>
                 </tr>
                 <tr>
                     <td>SQL Injection</td>
-                    <td>SQLMap docs, PortSwigger SQLi labs</td>
-                    <td>1 week</td>
-                    <td>🔴 HIGH</td>
+                    <td>PortSwigger SQLi labs</td>
+                    <td>1 tuần</td>
+                    <td>🔴 Cao</td>
                 </tr>
                 <tr>
                     <td>XSS</td>
-                    <td>PortSwigger XSS labs, XSS Hunter</td>
-                    <td>1 week</td>
-                    <td>🔴 HIGH</td>
+                    <td>PortSwigger XSS labs</td>
+                    <td>1 tuần</td>
+                    <td>🔴 Cao</td>
                 </tr>
             </table>
 
-            <p><strong>Hands-On Practice:</strong></p>
-            <ul>
-                <li>Complete PortSwigger Web Security Academy (Apprentice level)</li>
-                <li>Pass Burp Suite Certified Practitioner exam</li>
-                <li>Find 5 valid bugs on HackerOne (any program)</li>
-            </ul>
+            <div class="tip">
+                <strong>💡 Thực hành:</strong>
+                <ul>
+                    <li>Hoàn thành PortSwigger Web Security Academy (mức Apprentice)</li>
+                    <li>Tìm 5 bugs hợp lệ trên HackerOne (bất kỳ chương trình nào)</li>
+                </ul>
+            </div>
 
             <div class="divider"></div>
 
-            <h2>🤖 Phase 2: AI/ML Security Specialization (Months 3-6)</h2>
-            <p>Now that you have solid foundations, it's time to specialize in AI/ML security.</p>
+            <h2>🤖 Phase 2: Chuyên sâu AI/ML Security (Tháng 3-6)</h2>
+            <p>Khi đã có nền tảng, giờ là lúc chuyên sâu vào AI/ML security.</p>
 
-            <h3>2.1 Machine Learning Fundamentals ⭐⭐⭐⭐</h3>
+            <h3>2.1 Machine Learning cơ bản ⭐⭐⭐⭐</h3>
             <table>
                 <tr>
-                    <th>Topic</th>
-                    <th>Resources</th>
-                    <th>Time</th>
-                    <th>Priority</th>
+                    <th>Chủ đề</th>
+                    <th>Tài liệu</th>
+                    <th>Thời gian</th>
+                    <th>Ưu tiên</th>
                 </tr>
                 <tr>
                     <td>ML Basics</td>
                     <td>Coursera ML (Andrew Ng), Fast.ai</td>
-                    <td>4 weeks</td>
-                    <td>🔴 HIGH</td>
+                    <td>4 tuần</td>
+                    <td>🔴 Cao</td>
                 </tr>
                 <tr>
                     <td>Deep Learning</td>
-                    <td>"Deep Learning" by Goodfellow, PyTorch tutorials</td>
-                    <td>4 weeks</td>
-                    <td>🔴 HIGH</td>
+                    <td>"Deep Learning" (Goodfellow), PyTorch tutorials</td>
+                    <td>4 tuần</td>
+                    <td>🔴 Cao</td>
                 </tr>
                 <tr>
                     <td>Model Architectures</td>
                     <td>Transformers, CNNs, RNNs, GANs</td>
-                    <td>3 weeks</td>
-                    <td>🔴 HIGH</td>
+                    <td>3 tuần</td>
+                    <td>🔴 Cao</td>
                 </tr>
                 <tr>
                     <td>ML Frameworks</td>
                     <td>PyTorch, TensorFlow, HuggingFace</td>
-                    <td>3 weeks</td>
-                    <td>🔴 HIGH</td>
+                    <td>3 tuần</td>
+                    <td>🔴 Cao</td>
                 </tr>
             </table>
 
-            <p><strong>Hands-On Practice:</strong></p>
-            <ul>
-                <li>Build and train 3 neural networks: image classifier (CNN), text generator (RNN/Transformer), recommender system</li>
-                <li>Understand model file formats: GGUF, ONNX, SafeTensors, Pickle</li>
-                <li>Write a technical blog post: "How AI Models Work (for Security Researchers)"</li>
-            </ul>
+            <div class="tip">
+                <strong>💡 Thực hành:</strong>
+                <ul>
+                    <li>Xây dựng và train 3 neural networks: image classifier (CNN), text generator (RNN/Transformer), recommender system</li>
+                    <li>Hiểu các định dạng model file: GGUF, ONNX, SafeTensors, Pickle</li>
+                    <li>Viết blog: "AI Models hoạt động thế nào (dành cho Security Researchers)"</li>
+                </ul>
+            </div>
 
             <h3>2.2 AI/ML Attack Vectors ⭐⭐⭐⭐⭐</h3>
+            <p>Đây là phần quan trọng nhất - học cách tấn công hệ thống AI/ML.</p>
             <table>
                 <tr>
-                    <th>Topic</th>
-                    <th>Resources</th>
-                    <th>Time</th>
-                    <th>Priority</th>
+                    <th>Chủ đề</th>
+                    <th>Tài liệu</th>
+                    <th>Thời gian</th>
+                    <th>Ưu tiên</th>
                 </tr>
                 <tr>
                     <td>Adversarial ML</td>
-                    <td>"Adversarial Machine Learning" by Huang et al., CleverHans</td>
-                    <td>3 weeks</td>
-                    <td>🔴 HIGH</td>
+                    <td>"Adversarial Machine Learning" (Huang et al.), CleverHans</td>
+                    <td>3 tuần</td>
+                    <td>🔴 Cao</td>
                 </tr>
                 <tr>
                     <td>Model Inversion</td>
-                    <td>Research papers on model extraction attacks</td>
-                    <td>2 weeks</td>
-                    <td>🔴 HIGH</td>
+                    <td>Research papers về model extraction attacks</td>
+                    <td>2 tuần</td>
+                    <td>🔴 Cao</td>
                 </tr>
                 <tr>
                     <td>Data Poisoning</td>
-                    <td>Supply chain attacks on ML pipelines</td>
-                    <td>2 weeks</td>
-                    <td>🔴 HIGH</td>
+                    <td>Supply chain attacks trên ML pipelines</td>
+                    <td>2 tuần</td>
+                    <td>🔴 Cao</td>
                 </tr>
                 <tr>
                     <td>Prompt Injection</td>
                     <td>LLM security, promptfoo, Garfinkel et al.</td>
-                    <td>3 weeks</td>
-                    <td>🔴 HIGH</td>
+                    <td>3 tuần</td>
+                    <td>🔴 Cao</td>
                 </tr>
                 <tr>
                     <td>Model File Exploitation</td>
-                    <td>GGUF, TensorRT, ONNX parsing vulnerabilities</td>
-                    <td>4 weeks</td>
-                    <td>🔴 HIGH</td>
+                    <td>Lỗ hổng parsing GGUF, TensorRT, ONNX</td>
+                    <td>4 tuần</td>
+                    <td>🔴 Cao</td>
                 </tr>
             </table>
 
-            <p><strong>Hands-On Practice:</strong></p>
-            <ul>
-                <li>Reproduce 3 adversarial ML attacks from research papers</li>
-                <li>Create a proof-of-concept for 1 model file format vulnerability</li>
-                <li>Submit 1 bug report to an AI/ML bounty program</li>
-            </ul>
+            <div class="tip">
+                <strong>💡 Thực hành:</strong>
+                <ul>
+                    <li>Reproduce 3 adversarial ML attacks từ research papers</li>
+                    <li>Tạo proof-of-concept cho 1 lỗ hổng model file format</li>
+                    <li>Submit 1 bug report lên chương trình AI/ML bounty</li>
+                </ul>
+            </div>
 
             <h3>2.3 AI Security Tools ⭐⭐⭐</h3>
             <table>
                 <tr>
                     <th>Tool</th>
-                    <th>Purpose</th>
-                    <th>Priority</th>
+                    <th>Mục đích</th>
+                    <th>Ưu tiên</th>
                 </tr>
                 <tr>
                     <td><a href="https://gandalf.lakera.ai/">Gandalf</a></td>
-                    <td>LLM prompt injection training</td>
-                    <td>🔴 HIGH</td>
+                    <td>Training prompt injection cho LLM</td>
+                    <td>🔴 Cao</td>
                 </tr>
                 <tr>
                     <td><a href="https://github.com/williammartin/prompts-ai">promptfoo</a></td>
-                    <td>LLM security testing framework</td>
-                    <td>🔴 HIGH</td>
+                    <td>Framework test security cho LLM</td>
+                    <td>🔴 Cao</td>
                 </tr>
                 <tr>
                     <td><a href="https://github.com/cleverhans-lab/cleverhans">CleverHans</a></td>
-                    <td>Adversarial example library</td>
-                    <td>🟡 MEDIUM</td>
+                    <td>Thư viện adversarial examples</td>
+                    <td>🟡 Trung bình</td>
                 </tr>
                 <tr>
                     <td><a href="https://github.com/Trusted-AI/adversarial-robustness-toolbox">ART</a></td>
-                    <td>ML security evaluation</td>
-                    <td>🟡 MEDIUM</td>
-                </tr>
-                <tr>
-                    <td>TextAttack</td>
-                    <td>NLP model adversarial attacks</td>
-                    <td>🟡 MEDIUM</td>
+                    <td>Đánh giá security cho ML models</td>
+                    <td>🟡 Trung bình</td>
                 </tr>
             </table>
 
             <div class="divider"></div>
 
-            <h2>🔬 Phase 3: Advanced Research & Exploitation (Months 7-12)</h2>
-            <p>Time to push the boundaries and discover new vulnerabilities.</p>
+            <h2>🔬 Phase 3: Nghiên cứu nâng cao (Tháng 7-12)</h2>
+            <p>Giai đoạn cuối - đẩy giới hạn và khám phá lỗ hổng mới.</p>
 
             <h3>3.1 Advanced Exploitation ⭐⭐⭐⭐⭐</h3>
             <ul>
                 <li><strong>Deserialization Attacks:</strong> Pickle, Joblib, YAML, Pickle RCE</li>
-                <li><strong>SSTI in ML Contexts:</strong> Jinja2 in model metadata, template injection</li>
-                <li><strong>Memory Corruption:</strong> Buffer overflows in model parsers (C/C++)</li>
+                <li><strong>SSTI trong ML:</strong> Jinja2 trong model metadata, template injection</li>
+                <li><strong>Memory Corruption:</strong> Buffer overflows trong model parsers (C/C++)</li>
                 <li><strong>Supply Chain Attacks:</strong> Dependency confusion, typosquatting ML packages</li>
             </ul>
 
-            <p><strong>Hands-On Practice:</strong></p>
-            <ul>
-                <li>Discover 1 critical vulnerability (CVSS 9.0+)</li>
-                <li>Submit to a public bounty program (Huntr, HackerOne)</li>
-                <li>Present at an AI security meetup or conference</li>
-            </ul>
+            <div class="tip">
+                <strong>💡 Mục tiêu:</strong>
+                <ul>
+                    <li>Khám phá 1 lỗ hổng critical (CVSS 9.0+)</li>
+                    <li>Submit lên bounty program public (Huntr, HackerOne)</li>
+                    <li>Thuyết trình tại meetup/conference về AI security</li>
+                </ul>
+            </div>
 
             <h3>3.2 Research & Publication ⭐⭐⭐</h3>
             <ul>
-                <li><strong>Original Research:</strong> Novel AI attack vector</li>
-                <li><strong>Blog Posts:</strong> 1 post/month on AI security topics</li>
-                <li><strong>Conference Talks:</strong> Submit to DEF CON AI Village, Black Hat</li>
+                <li><strong>Nghiên cứu gốc:</strong> Attack vector mới cho AI</li>
+                <li><strong>Blog Posts:</strong> 1 bài/tháng về AI security</li>
+                <li><strong>Conference Talks:</strong> Submit lên DEF CON AI Village, Black Hat</li>
                 <li><strong>GitHub Projects:</strong> Open-source AI security tools</li>
             </ul>
 
             <div class="divider"></div>
 
-            <h2>📈 Monthly Milestones</h2>
+            <h2>📈 Cột mốc hàng tháng</h2>
             <table>
                 <tr>
-                    <th>Month</th>
-                    <th>Focus</th>
-                    <th>Key Metrics</th>
-                    <th>Target</th>
+                    <th>Tháng</th>
+                    <th>Tập trung</th>
+                    <th>Mục tiêu</th>
+                    <th>Kết quả</th>
                 </tr>
                 <tr>
-                    <td>Mar</td>
-                    <td>Foundations</td>
-                    <td>PortSwigger labs completed</td>
+                    <td>3</td>
+                    <td>Nền tảng</td>
+                    <td>PortSwigger labs</td>
                     <td>50%</td>
                 </tr>
                 <tr>
-                    <td>Apr</td>
+                    <td>4</td>
                     <td>Web Security</td>
-                    <td>First valid bug submitted</td>
+                    <td>Bug đầu tiên</td>
                     <td>1 bug</td>
                 </tr>
                 <tr>
-                    <td>May</td>
+                    <td>5</td>
                     <td>ML Basics</td>
-                    <td>Models built & trained</td>
+                    <td>Models đã train</td>
                     <td>3 models</td>
                 </tr>
                 <tr>
-                    <td>Jun</td>
+                    <td>6</td>
                     <td>AI Attacks</td>
-                    <td>Adversarial examples created</td>
+                    <td>Adversarial examples</td>
                     <td>3 attacks</td>
                 </tr>
                 <tr>
-                    <td>Jul</td>
-                    <td>Tool Mastery</td>
-                    <td>AI security tools mastered</td>
+                    <td>7</td>
+                    <td>Tools</td>
+                    <td>Tools đã thành thạo</td>
                     <td>5 tools</td>
                 </tr>
                 <tr>
-                    <td>Aug</td>
-                    <td>First Bounty</td>
-                    <td>First AI bug submitted</td>
+                    <td>8</td>
+                    <td>Bounty đầu tiên</td>
+                    <td>AI bug đã submit</td>
                     <td>1 submission</td>
                 </tr>
                 <tr>
-                    <td>Sep</td>
+                    <td>9</td>
                     <td>Advanced Exploitation</td>
-                    <td>Critical vuln discovered</td>
+                    <td>Lỗ hổng critical</td>
                     <td>1 critical</td>
                 </tr>
                 <tr>
-                    <td>Oct</td>
-                    <td>Research</td>
-                    <td>Blog posts published</td>
+                    <td>10</td>
+                    <td>Nghiên cứu</td>
+                    <td>Blog posts</td>
                     <td>3 posts</td>
                 </tr>
                 <tr>
-                    <td>Nov</td>
-                    <td>Advanced Research</td>
-                    <td>Open-source tool released</td>
+                    <td>11</td>
+                    <td>Nghiên cứu nâng cao</td>
+                    <td>Open-source tool</td>
                     <td>1 tool</td>
                 </tr>
                 <tr>
-                    <td>Dec</td>
-                    <td>Mastery</td>
+                    <td>12</td>
+                    <td>Thành thạo</td>
                     <td>Conference submission</td>
                     <td>1 talk</td>
                 </tr>
@@ -392,54 +398,59 @@
 
             <div class="divider"></div>
 
-            <h2>🎓 Recommended Resources</h2>
+            <h2>🎓 Tài liệu tham khảo</h2>
 
-            <h3>Primary Roadmaps</h3>
+            <h3>Lộ trình chính</h3>
             <ul>
-                <li><a href="https://roadmap.sh/cyber-security">Roadmap.sh Cyber Security</a> ⭐ - Complete cybersecurity learning path (primary inspiration)</li>
-                <li><a href="https://owasp.org/www-project-top-ten/">OWASP Top 10</a> - Web security fundamentals</li>
+                <li><a href="https://roadmap.sh/cyber-security">Roadmap.sh Cyber Security</a> ⭐ - Lộ trình cybersecurity đầy đủ (nguồn cảm hứng chính)</li>
+                <li><a href="https://owasp.org/www-project-top-ten/">OWASP Top 10</a> - Kiến thức web security cơ bản</li>
             </ul>
 
-            <h3>Learning Platforms</h3>
+            <h3>Nền tảng học tập</h3>
             <ul>
-                <li><a href="https://portswigger.net/web-security">PortSwigger Web Security Academy</a> - Free web security training</li>
-                <li><a href="https://coursera.org/learn/machine-learning">Coursera Machine Learning</a> - Andrew Ng's ML course</li>
-                <li><a href="https://fast.ai">Fast.ai</a> - Practical deep learning</li>
+                <li><a href="https://portswigger.net/web-security">PortSwigger Web Security Academy</a> - Miễn phí</li>
+                <li><a href="https://coursera.org/learn/machine-learning">Coursera Machine Learning</a> - Andrew Ng</li>
+                <li><a href="https://fast.ai">Fast.ai</a> - Deep learning thực tế</li>
             </ul>
 
-            <h3>AI Security Resources</h3>
+            <h3>Tài nguyên AI Security</h3>
             <ul>
-                <li><a href="https://huntr.com/bounties">Huntr.com AI Bounties</a> - AI/ML bug bounty programs</li>
-                <li><a href="https://github.com/cleverhans-lab/cleverhans">CleverHans Library</a> - Adversarial examples library</li>
-                <li><a href="https://gandalf.lakera.ai/">Prompt Injection Training (Gandalf)</a> - LLM security game</li>
-                <li><a href="https://github.com/williammartin/prompts-ai">promptfoo</a> - LLM security testing framework</li>
-                <li><a href="https://github.com/Trusted-AI/adversarial-robustness-toolbox">ART</a> - ML security evaluation</li>
+                <li><a href="https://huntr.com/bounties">Huntr.com AI Bounties</a> - Chương trình bounty AI/ML</li>
+                <li><a href="https://github.com/cleverhans-lab/cleverhans">CleverHans Library</a> - Thư viện adversarial examples</li>
+                <li><a href="https://gandalf.lakera.ai/">Gandalf</a> - Game training prompt injection</li>
+                <li><a href="https://github.com/williammartin/prompts-ai">promptfoo</a> - Framework test LLM security</li>
+                <li><a href="https://github.com/Trusted-AI/adversarial-robustness-toolbox">ART</a> - Tool đánh giá ML security</li>
             </ul>
 
-            <h3>Books</h3>
+            <h3>Sách nên đọc</h3>
             <ul>
-                <li>"Black Hat Python" by Justin Seitz</li>
-                <li>"Bug Bounty Bootcamp" by Vickie Li</li>
-                <li>"Deep Learning" by Ian Goodfellow</li>
-                <li>"Adversarial Machine Learning" by Huang et al.</li>
+                <li>"Black Hat Python" - Justin Seitz</li>
+                <li>"Bug Bounty Bootcamp" - Vickie Li</li>
+                <li>"Deep Learning" - Ian Goodfellow</li>
+                <li>"Adversarial Machine Learning" - Huang et al.</li>
             </ul>
 
             <div class="divider"></div>
 
-            <h2>🚀 Getting Started TODAY</h2>
-            <p>Don't wait—start learning now! Here's your Day 1 checklist:</p>
+            <h2>🚀 Bắt đầu NGAY HÔM NAY</h2>
+            <p>Đừng chờ đợi - bắt đầu học ngay! Checklist cho ngày đầu tiên:</p>
             <ol>
-                <li><strong>Sign up for PortSwigger Web Security Academy</strong> (free) - Start with "Server-side vulnerabilities" track</li>
-                <li><strong>Install OverTheWire Bandit</strong> - Complete levels 1-5 today</li>
-                <li><strong>Set up your learning environment</strong> - Install Python 3.11+, VS Code, create GitHub account</li>
-                <li><strong>Join the community</strong> - Follow AI security researchers on Twitter/X, join Discord servers</li>
-                <li><strong>Start a learning journal</strong> - Document what you learn daily, build a portfolio</li>
+                <li><strong>Đăng ký PortSwigger Web Security Academy</strong> (miễn phí) - Bắt đầu với track "Server-side vulnerabilities"</li>
+                <li><strong>Cài OverTheWire Bandit</strong> - Hoàn thành levels 1-5 hôm nay</li>
+                <li><strong>Setup môi trường học:</strong> Python 3.11+, VS Code, tạo GitHub account</li>
+                <li><strong>Tham gia community:</strong> Follow researchers AI security trên Twitter/X, join Discord servers</li>
+                <li><strong>Bắt đầu learning journal:</strong> Ghi chép những gì học được mỗi ngày</li>
             </ol>
 
             <div class="highlight">
-                <strong>🔥 Final Thoughts:</strong><br>
-                AI/ML security is a rapidly growing field with immense opportunities. The key to success is consistency, hands-on practice, community engagement, and curiosity. This roadmap is designed to take you from zero to AI security researcher in 12 months. Adjust the pace based on your background and available time.<br><br>
-                <strong>Remember:</strong> Every expert was once a beginner. Start today, stay consistent, and you'll be surprised how far you can go in a year.
+                <strong>🔥 Lời kết:</strong><br>
+                AI/ML security là lĩnh vực đang phát triển nhanh với cơ hội lớn. Chìa khóa thành công:<br><br>
+                ✅ <strong>Kiên trì</strong> - Học mỗi ngày<br>
+                ✅ <strong>Thực hành</strong> - Lý thuyết phải đi đôi với thực tế<br>
+                ✅ <strong>Cộng đồng</strong> - Kết nối với researchers khác<br>
+                ✅ <strong>Tò mò</strong> - Luôn tự hỏi "what if?" và "làm sao để phá?"<br><br>
+                Lộ trình này được thiết kế để đưa bạn từ số 0 đến AI security researcher trong 12 tháng. Điều chỉnh tốc độ phù hợp với nền tảng và thời gian của bạn.<br><br>
+                <strong>Nhớ rằng:</strong> Mọi chuyên gia đều từng là người mới. Bắt đầu hôm nay, kiên trì, và bạn sẽ ngạc nhiên về những gì có thể đạt được trong 1 năm.
             </div>
         </article>
 
